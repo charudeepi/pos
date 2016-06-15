@@ -107,7 +107,7 @@
             width: 100px;
             display: none;
             height: 60px;
-            background-color: #69abaf;
+            background-color: goldenrod;
             margin: 10px 10px 10px 0;
             border-radius: 5px;
             width: 100%;
@@ -117,6 +117,12 @@
 
             padding: 20px 70px;
         }
+        .algo {
+            font-size: 14px;
+            color: teal;
+            text-decoration: none;
+            text-transform: capitalize;
+        }
 
 
     </style>
@@ -124,22 +130,22 @@
 <body>
 <button value="button1"></button>
 <div class="wrapper">
-<h1>POS Algorithm</h1>
-<!--<script src="jquery.min.js"></script>-->
-<script src="ajax.js"></script>
+    <h1>POS Algorithm</h1>
+    <!--<script src="jquery.min.js"></script>-->
+    <script src="ajax.js"></script>
 
-<h2>Enter the product text</h2>
+    <h2>Enter the product code - <a href="algo-specifications.html" class="algo" target="_blank">See How</a></h2>
 
-<div id="j-box">
-    <div id="ans"></div>
-</div>
-<!--<p>dd</p>-->
+    <div id="j-box">
+        <div id="ans"></div>
+    </div>
+    <!--<p>dd</p>-->
 
-<form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>" name="pos">
-    <input type="text" id="code" name="product_txt" value=""  placeholder="Enter Product Code" />
-    <button id="form-submit" type="button"  name="submit">Submit</button>
-    <button id="form-reset" type="reset" value="Reset">Reset</button>
-</form>
+    <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>" name="pos">
+        <input type="text" id="code" name="product_txt" value=""  placeholder="Enter Product Code" />
+        <button id="form-submit" type="button"  name="submit">Submit</button>
+        <button id="form-reset" type="reset" value="Reset">Reset</button>
+    </form>
 </div>
 </body>
 </html>
