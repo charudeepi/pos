@@ -12,15 +12,18 @@ POS = {
     priceB: 0, // B $12
     priceC: 0, // B $12
     priceD: 0, // B $12
-
     totalPrice: 0,
-
     validateC: true,
-
     codeInput: "",
+    inputCode: "",
+    boxAns: "",
+    jBox: "",
 
     init: function () {
 
+        this.inputCode = document.getElementById("code");
+        this.boxAns = document.getElementById("ans");
+        this.jBox = document.getElementById("j-box");
 
         document.getElementById("form-reset").onclick = function () {
 
@@ -36,16 +39,16 @@ POS = {
 
         }
 
-        document.getElementById("form-submit").addEventListener('submit', function(evn){
-            evn.preventDefault();
-            POS.getTotalPrice();
-        },true);
+        //document.getElementById("form-submit").addEventListener('submit', function(evn){
+        //    evn.preventDefault();
+        //    POS.getTotalPrice();
+        //},true);
 
         document.getElementById("form-submit").onclick = function() {
             POS.getTotalPrice();
         }
-
-        document.getElementById('code').focus();
+        
+        this.inputCode.focus();
 
 
     },
@@ -101,9 +104,9 @@ POS = {
 
             this.clearCart();
             document.getElementById("code").value = "";
-            document.getElementById("ans").innerText = "Kindly Enter alphabets A,B,C or D";
-            document.getElementById("j-box").style.visibility = "visible";
-            document.getElementById("j-box").className = "orange";
+            this.boxAns.innerText = "Kindly Enter alphabets A,B,C or D";
+            this.jBox.style.visibility = "visible";
+            this.jBox.className = "orange";
             throw new Error('Kindly Enter alphabets A or B');
             return false;
         }
@@ -115,7 +118,7 @@ POS = {
 
         this.countA = this.countB = this.countC = this.countD = this.priceA = this.priceB = this.priceC = this.priceD = 0;
         this.codeInput = "";
-        document.getElementById("j-box").style.visibility = "hidden";
+        this.jBox.style.visibility = "hidden";
 
 
     },
@@ -155,12 +158,12 @@ POS = {
         this.setTotalPrice();
 
         this.totalPrice = this.priceA + this.priceB + this.priceC + this.priceD;
-        document.getElementById("ans").innerText = "The total price of " + this.codeInput + " is $" + this.totalPrice.toFixed(2);
-        document.getElementById("j-box").style.visibility = "visible";
-        document.getElementById("j-box").className = "teal";
-        document.getElementById("code").value = "";
-        document.getElementById('code').blur();
-        document.getElementById('code').focus();
+        this.boxAns.innerText = "The total price of " + this.codeInput + " is $" + this.totalPrice.toFixed(2);
+        this.jBox.style.visibility = "visible";
+        this.jBox.className = "teal";
+        this.inputCode.value = "";
+        this.inputCode.blur();
+        this.inputCode.focus();
 
     },
 
@@ -174,7 +177,7 @@ POS = {
                 //this.countItems();
                 //this.getTotalPrice();
 
-                document.getElementById("j-box").innerText = "The total price of " + this.codeInput + " is " + this.totalPrice;
+                this.jBox.innerText = "The total price of " + this.codeInput + " is " + this.totalPrice;
             }
         }
         xhttp.open("POST", "index.php", "true");
