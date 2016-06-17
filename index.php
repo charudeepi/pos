@@ -105,7 +105,7 @@
 
         #j-box {
             width: 100px;
-            display: none;
+            visibility: hidden;
             height: 60px;
             background-color: goldenrod;
             margin: 10px 10px 10px 0;
@@ -115,7 +115,8 @@
 
         #ans {
 
-            padding: 20px 70px;
+            padding: 20px 60px;
+
         }
         .algo {
             font-size: 14px;
