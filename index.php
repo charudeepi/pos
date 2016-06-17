@@ -15,7 +15,7 @@
         .wrapper{
             background-color: #333131;
             width:420px;
-            margin: 10% auto;
+            margin: 6% auto;
             padding: 1% 4% 4%;
             border-radius: 8px;
         }
@@ -107,10 +107,17 @@
             width: 100px;
             visibility: hidden;
             height: 60px;
-            background-color: goldenrod;
             margin: 10px 10px 10px 0;
             border-radius: 5px;
             width: 100%;
+        }
+        #j-box.orange {
+            background-color: goldenrod;
+            color: black;
+        }
+        #j-box.teal {
+            background-color: teal;
+            color: white;
         }
 
         #ans {
@@ -133,6 +140,7 @@
 <div class="wrapper">
     <h1>POS Algorithm</h1>
     <!--<script src="jquery.min.js"></script>-->
+    <script src="ajax.js"></script>
 
     <h2>Enter the product code - <a href="algo-specifications.html" class="algo" target="_blank">See How</a></h2>
 
@@ -147,6 +155,5 @@
         <button id="form-reset" type="reset" value="Reset">Reset</button>
     </form>
 </div>
-<script src="pos_algorithm.js"></script>
 </body>
 </html>
