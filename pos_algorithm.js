@@ -10,8 +10,8 @@ POS = {
     countD: 0,
     priceA: 0, // A $2 each or 4 for $7.00
     priceB: 0, // B $12
-    priceC: 0, // B $12
-    priceD: 0, // B $12
+    priceC: 0, // C $1.25 or $6 for a six pack
+    priceD: 0, // D $0.15
     totalPrice: 0,
     validateC: true,
     codeInput: "",
