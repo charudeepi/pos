@@ -98,9 +98,12 @@ POS = {
             }
 
         } else {
-            alert('Kindly Enter alphabets A,B,C or D');
+
             this.clearCart();
             document.getElementById("code").value = "";
+            document.getElementById("ans").innerText = "Kindly Enter alphabets A,B,C or D";
+            document.getElementById("j-box").style.visibility = "visible";
+            document.getElementById("j-box").className = "orange";
             throw new Error('Kindly Enter alphabets A or B');
             return false;
         }
@@ -152,8 +155,9 @@ POS = {
         this.setTotalPrice();
 
         this.totalPrice = this.priceA + this.priceB + this.priceC + this.priceD;
-        document.getElementById("ans").innerText = "The total price of " + this.codeInput + " is " + this.totalPrice;
+        document.getElementById("ans").innerText = "The total price of " + this.codeInput + " is $" + this.totalPrice.toFixed(2);
         document.getElementById("j-box").style.visibility = "visible";
+        document.getElementById("j-box").className = "teal";
         document.getElementById("code").value = "";
         document.getElementById('code').blur();
         document.getElementById('code').focus();
