@@ -86,13 +86,13 @@ POS = {
 
             for (i = 0; i < items.length; i++) {
 
-                if (items[i] == "A") {
+                if (items[i] == "A" || items[i] == "a") {
                     this.countA++;
-                } else if (items[i] == "B"){
+                } else if (items[i] == "B" || items[i] == "b"){
                     this.countB++;
-                }else if (items[i] == "C"){
+                }else if (items[i] == "C" || items[i] == "c"){
                     this.countC++;
-                }else if (items[i] == "D"){
+                }else if (items[i] == "D" || items[i] == "d"){
                     this.countD++;
                 }
             }
