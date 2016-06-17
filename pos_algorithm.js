@@ -112,7 +112,7 @@ POS = {
 
         this.countA = this.countB = this.countC = this.countD = this.priceA = this.priceB = this.priceC = this.priceD = 0;
         this.codeInput = "";
-        document.getElementById("j-box").style.display = "none";
+        document.getElementById("j-box").style.visibility = "hidden";
 
 
     },
@@ -153,7 +153,7 @@ POS = {
 
         this.totalPrice = this.priceA + this.priceB + this.priceC + this.priceD;
         document.getElementById("ans").innerText = "The total price of " + this.codeInput + " is " + this.totalPrice;
-        document.getElementById("j-box").style.display = "block";
+        document.getElementById("j-box").style.visibility = "visible";
         document.getElementById("code").value = "";
         document.getElementById('code').blur();
         document.getElementById('code').focus();
